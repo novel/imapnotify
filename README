@@ -1,0 +1,17 @@
+imapnotify
+---------------------
+Simple imap notifier written in ObjC and using libnotify. 
+ATM works only with IMAPS servers (IMAP + SSL).
+
+Requirments:
+ - gcc
+ - libnotify-devel (or whatever package contains header files
+   and stuff)
+ - OpenSSL-devel
+
+to build type:
+
+  make
+
+PS Tested on FreeBSD 8-current, not sure if it will even compile on
+something else :p
