@@ -141,6 +141,9 @@
 	ret = SSL_write(ssl, msg, strlen(msg));
 	ret = SSL_read(ssl, buffer, MAX_BUF);
 
+	free(msg);
+	
+	SSL_free(ssl);
 	SSL_CTX_free(ctx);
 	close(sockfd);
 

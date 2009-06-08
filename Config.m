@@ -31,7 +31,12 @@
 		exit(1);
 	}
 
-	[self parseConfigLine: content];
+	[self parseConfigLine: content];	
+
+	fclose(fp);
+	free(config_file_path);
+
+	return self;
 }
 
 - (void) parseConfigLine:(const char *)config_line {
@@ -51,6 +56,8 @@
 	self->server = config_settings[0];
 	self->username = config_settings[1];
 	self->password = config_settings[2];
+
+	free(config_settings);
 }
 
 - (char *) server {
