@@ -9,9 +9,14 @@ Requirments:
    and stuff)
  - OpenSSL-devel
 
+On Ubuntu you'll have to install ObjC compiler (do
+apt-cache search objc and you won't miss it)
+
 to build type:
 
   make
 
 PS Tested on FreeBSD 8-current, not sure if it will even compile on
 something else :p
+
+PPS Compiles on Ubuntu 8.10

@@ -96,11 +96,8 @@
 }
 
 - (int) messagesCount {
-	int sd;
 	size_t login_len;
-	int sockfd, err, ret, i;
-	struct hostent *hostent;
-	struct sockaddr_in serv_addr;
+	int sockfd, ret;
 	char buffer[MAX_BUF + 1];
 	char *login_templ = "in01 login %s %s\r\n";
 	char *msg;
